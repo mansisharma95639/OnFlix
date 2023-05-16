@@ -20,5 +20,7 @@ Welcome to the OnFlix Movie Streaming Website! This project is built using Angul
 ## API Usage
 This project relies on external APIs to retrieve movie data. The APIs used for fetching movie information include https://api.themoviedb.org/3. 
 
-## Thankyou
-Thank you for visiting the onFlix Movie Streaming Website! We hope you enjoy streaming movies with us.
+## Screen Recording
+
+https://github.com/mansisharma95639/OnFlix/assets/77538392/e5322f38-37d4-4143-b11e-6c5414a4f60b
+
