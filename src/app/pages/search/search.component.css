@@ -1,0 +1,35 @@
+button{
+    background-color: #E50914;
+    color: #ffffff ;
+}
+
+button:hover 
+{
+    background-color: #E50914;
+    color : #ffffff;
+}
+
+img{
+    width: 100%;
+    cursor: pointer;
+}
+
+h5{
+    color: #ffffff;
+}
+
+.cancel{
+    background-color: transparent;
+    border: grey;
+    font-size: 55px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -39px;
+    padding: 9px;
+}
+
+.cancel:hover{
+    font-size: 60px;
+    background-color: transparent;
+    color: #ffffff;
+}

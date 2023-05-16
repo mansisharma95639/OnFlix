@@ -1,0 +1,47 @@
+img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+p{
+    color : #ffffff;
+}
+
+a{
+    background-color: #E50914;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: #E50914;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+
+.cancel{
+    background-color: transparent;
+    border: grey;
+    font-size: 55px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -39px;
+    padding: 9px;
+    color: grey;
+    width: 10%;
+    margin-left: 85%;
+}
+
+.cancel:hover{
+    margin-left: 85%;
+    width: 10%;
+    /* font-size: 60px; */
+    background-color: transparent;
+    color: grey;
+}

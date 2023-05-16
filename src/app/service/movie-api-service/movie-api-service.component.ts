@@ -1,0 +1,76 @@
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+@Component({
+  selector: 'app-movie-api-service',
+  templateUrl: './movie-api-service.component.html',
+  styleUrls: ['./movie-api-service.component.css']
+})
+export class MovieApiServiceComponent implements OnInit {
+
+  constructor(private http: HttpClient) { }
+
+  ngOnInit(): void {
+  }
+
+  baseurl = "https://api.themoviedb.org/3";
+  apikey = "08cc33bd5ae3a747598ce2ad84376e66";
+
+  bannerApiData(): Observable<any> {
+    return this.http.get(`${this.baseurl}/trending/all/week?api_key=${this.apikey}`);
+  }
+
+    trendingMovieApiData(): Observable<any> {
+    return this.http.get(`${this.baseurl}/trending/movie/day?api_key=${this.apikey}`);
+  }
+
+  searchMovie(data: any): Observable<any> {
+    return this.http.get(`${this.baseurl}/search/movie?api_key=${this.apikey}&query=${data.movieName}`);
+  }
+
+  getSearchMovie(data: any): Observable<any> {
+    return this.http.get(`${this.baseurl}/search/movie?api_key=${this.apikey}&query=${data.movieName}`);
+  }
+
+  getMovieDetails(data: any): Observable<any> {
+    return this.http.get(`${this.baseurl}/movie/${data}?api_key=${this.apikey}`);
+  }
+
+   getMovieVideo(data: any): Observable<any> {
+    return this.http.get(`${this.baseurl}/movie/${data}/videos?api_key=${this.apikey}`)
+  }
+
+  getMovieCast(data: any): Observable<any> {
+    return this.http.get(`${this.baseurl}/movie/${data}/credits?api_key=${this.apikey}`)
+  }
+
+ fetchActionMovies(): Observable<any> {
+    return this.http.get(`${this.baseurl}/discover/movie?api_key=${this.apikey}&with_genres=28`);
+  }
+
+  fetchAdventureMovies(): Observable<any> {
+    return this.http.get(`${this.baseurl}/discover/movie?api_key=${this.apikey}&with_genres=12`);
+  }
+
+  fetchAnimationMovies(): Observable<any> {
+    return this.http.get(`${this.baseurl}/discover/movie?api_key=${this.apikey}&with_genres=16`);
+  }
+
+  fetchComedyMovies(): Observable<any> {
+    return this.http.get(`${this.baseurl}/discover/movie?api_key=${this.apikey}&with_genres=35`);
+  }
+
+  fetchDocumentaryMovies(): Observable<any> {
+    return this.http.get(`${this.baseurl}/discover/movie?api_key=${this.apikey}&with_genres=99`);
+  }
+
+
+  fetchScienceFictionMovies(): Observable<any> {
+    return this.http.get(`${this.baseurl}/discover/movie?api_key=${this.apikey}&with_genres=878`);
+  }
+
+  // // thriller:53
+  fetchThrillerMovies(): Observable<any> {
+    return this.http.get(`${this.baseurl}/discover/movie?api_key=${this.apikey}&with_genres=53`);
+  }
+}
